@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfToDoApp.LoginView"
+﻿<UserControl x:Class="WpfToDoApp.ToDoView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,14 +15,21 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="75" />
+            <RowDefinition Height="10" />
             <RowDefinition Height="50" />
             <RowDefinition Height="10" />
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" Grid.Row="1" Content="Please Login" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" />
-        <Button Click="LoginButton_Click" Grid.Column="1" Grid.Row="3" Content="Login" />
+        <Button Click="AddToDoButton_Click" Grid.Row="5" Grid.Column="1" Content="Create ToDo" />
+
+        <TextBox x:Name="ToDoInput" Grid.Row="3" Grid.Column="1" />
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto" >
+            <StackPanel x:Name="ToDoList"></StackPanel>
+        </ScrollViewer>
 
     </Grid>
 </UserControl>

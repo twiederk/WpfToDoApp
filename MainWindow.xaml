@@ -8,29 +8,9 @@
         Title="WPF ToDo-App" Height="450" Width="400"
         ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="10" />
-        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="10" />
-            <RowDefinition Height="75" />
-            <RowDefinition Height="10" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="10" />
-        </Grid.RowDefinitions>
+        <ContentControl x:Name="MainContent" />
 
-        <Button Click="AddToDoButton_Click" Grid.Row="5" Grid.Column="1" Content="Create ToDo" />
-
-        <TextBox x:Name="ToDoInput" Grid.Row="3" Grid.Column="1" />
-
-        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto" >
-            <StackPanel x:Name="ToDoList"></StackPanel>
-        </ScrollViewer>
 
     </Grid>
 </Window>
